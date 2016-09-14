@@ -1,6 +1,8 @@
 import React from 'react';
-import Scoreboard from '../components/scoreboard';
+import PhaseChanger from '../components/phase_changer';
 
-export default (props) => (
-  <Scoreboard {...props} />
+export default ({ phases }) => (
+  <div className="phase">
+    <PhaseChanger phases={phases} />
+  </div>
 );

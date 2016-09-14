@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'scoreboard', to: 'scoreboard#index'
-  root to: "static_pages#root"
+  root to: 'scoreboard#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

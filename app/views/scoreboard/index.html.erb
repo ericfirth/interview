@@ -1,29 +1,3 @@
-<h1 class="alert alert-info this-works">Interview</h1>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#rules" aria-expanded="false" aria-controls="rules">
-  Toggle Objectives
-</button>
-<div class="collapse" id="rules">
-  <ul>
-    <li>
-      Build a scoreboard. Show all scores, with player and game information in the table
-    </li>
-    <li>
-      Sort the list based on the score
-    </li>
-    <li>
-      Use the above links and fill them in with the games (and a fourth for all games). Clicking on the link should filter the scores with the correct game.
-    </li>
-    <li>
-      Sorting pt 1: Add links on the Table headers to sort by that attribute. Clicking the table header a second time will toggle from descending to ascending order.
-    </li>
-    <li>
-      Sorting pt 2: Make it so a person can sort by 2 attributes and reset the sorting to the default (By score descending)
-    </li>
-  </ul>
-</div>
-<script>
-$('.collapse').collapse();
-</script>
 <%= react_component("ScoreBoardApp",
                      props: @props,
                      prerender: false) %>

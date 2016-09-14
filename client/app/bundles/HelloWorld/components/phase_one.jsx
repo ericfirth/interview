@@ -16,6 +16,8 @@ export default class PhaseOne extends React.Component {
               <th>Score</th>
             </tr>
           </thead>
+          <tbody>
+          </tbody>
         </table>
       </div>
     );

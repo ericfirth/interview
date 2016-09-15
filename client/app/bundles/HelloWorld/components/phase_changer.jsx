@@ -3,6 +3,7 @@ import PhaseOne from './phase_one';
 import PhaseTwo from './phase_two';
 import PhaseThree from './phase_three';
 
+
 export default class PhaseChanger extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +41,18 @@ export default class PhaseChanger extends Component {
       case 2:
         return <PhaseTwo {...props} />;
       case 3:
-        return <PhaseThree {...props} />;
+        return (
+          <div className="scoreboard container">
+            <table className="table tabled-striped">
+              <thead>
+              </thead>
+              <tbody>
+                <PhaseThree {...props} />
+                <PhaseThree {...props} />
+              </tbody>
+            </table>
+          </div>
+        );
       default:
         break;
     }

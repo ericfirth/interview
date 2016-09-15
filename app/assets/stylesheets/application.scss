@@ -33,6 +33,8 @@ $rails: true;
 
 // This must come after all the boostrap styles are loaded so that these styles can override those.
 @import 'post-bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .current-rules {
   width: 75%;

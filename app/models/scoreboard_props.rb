@@ -5,13 +5,13 @@ class ScoreboardProps
   def initialize
   end
   
-  def props
-    { phases: [phase_one, phase_two, phase_three] }
+  def props_with_page(page)
+    { phases: [phase_one, phase_two, phase_three], page: page }
   end
   
   def phase_one
     props = empty_prop_object
-    props[:instructions] = "You are a new employee of a brand new website for gamers. Your goal is to make a scoreboard table. Take the props, and this table skeleton and build us scoreboard. BTW we offshored the API that you will receive them from to a developer off-shore.Good Luck!"
+    props[:instructions] = "You are a new employee of a brand new website for gamers. Your goal is to make a scoreboard table. Take the props, and this table skeleton and build us a scoreboard! BTW we offshored the API that you will receive your props from to a developer off-shore. Good Luck!"
     props[:extra_tasks] << "sort the scores so they go high - low"
     props[:extra_tasks] << "make the player names a link that filter the list to show only that players scores"
     props[:extra_tasks] << "make a link to show all the scores and have a header above the table that shows what the table is"

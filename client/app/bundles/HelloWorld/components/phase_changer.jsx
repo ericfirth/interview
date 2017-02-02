@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import PhaseOne from './phase_one';
 import PhaseTwo from './phase_two';
 import PhaseThree from './phase_three';
@@ -7,30 +7,28 @@ import PhaseThree from './phase_three';
 export default class PhaseChanger extends Component {
   constructor(props) {
     super(props);
-    this.nextPhase = this.nextPhase.bind(this);
-    this.previousPhase = this.previousPhase.bind(this);
     this.previousPhaseButton = this.previousPhaseButton.bind(this);
     this.nextPhaseButton = this.nextPhaseButton.bind(this);
     this.currentPhase = this.currentPhase.bind(this);
 
     this.state = {
-      phase: 1,
+      phase: parseInt(props.page),
     };
   }
-  nextPhase() {
-    this.setState({ phase: this.state.phase + 1 });
-  }
-  previousPhase() {
-    this.setState({ phase: this.state.phase - 1 });
-  }
   nextPhaseButton() {
+    const nextPhase = this.state.phase + 1;
     if (this.state.phase < 3) {
-      return <a onClick={this.nextPhase}>on to phase {this.state.phase + 1}</a>;
+      return (
+        <a href={`/?page=${nextPhase}`}>
+          on to phase {this.state.phase + 1}<i className="fa fa-arrow-right" />
+        </a>
+      );
     }
   }
   previousPhaseButton() {
+    const previousPhase = this.state.phase - 1;
     if (this.state.phase > 1) {
-      return <a onClick={this.previousPhase}>back to phase {this.state.phase - 1}</a>;
+      return <a href={`/?page=${previousPhase}`}><i className="fa fa-arrow-left" />back to phase {this.state.phase - 1}</a>;
     }
   }
   currentPhase() {
@@ -47,7 +45,6 @@ export default class PhaseChanger extends Component {
               <thead>
               </thead>
               <tbody>
-                <PhaseThree {...props} />
                 <PhaseThree {...props} />
               </tbody>
             </table>

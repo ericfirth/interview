@@ -7,14 +7,22 @@ export default class PhaseThree extends React.Component {
   }
 // approximation of the old component since the props have been changed.
   render() {
-    const columns = ["hi", "bye"]
-    const score = { hi: 1, bye: "hello" }
     return (
-      <tr>
-        {
-          columns.map((column, index) => <td>{score[column]}</td>)
-        }
-      </tr>
+      <div className="scoreboard container">
+        <h2 className="text-center">🔥🔥🔥 LEGENDS OF GAMEZ 🔥🔥🔥</h2>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Score</th>
+              <th>Games</th>
+            </tr>
+          </thead>
+          <tbody>
+            { /* Code would go here */ }
+          </tbody>
+        </table>
+      </div>
     );
   }
 }

@@ -19,7 +19,7 @@ export default class PhaseChanger extends Component {
     const nextPhase = this.state.phase + 1;
     if (this.state.phase < 3) {
       return (
-        <a href={`/?page=${nextPhase}`}>
+        <a href={`/pages/${nextPhase}`}>
           on to phase {this.state.phase + 1}<i className="fa fa-arrow-right" />
         </a>
       );
@@ -28,7 +28,7 @@ export default class PhaseChanger extends Component {
   previousPhaseButton() {
     const previousPhase = this.state.phase - 1;
     if (this.state.phase > 1) {
-      return <a href={`/?page=${previousPhase}`}><i className="fa fa-arrow-left" />back to phase {this.state.phase - 1}</a>;
+      return <a href={`/pages/${previousPhase}`}><i className="fa fa-arrow-left" />back to phase {this.state.phase - 1}</a>;
     }
   }
   currentPhase() {
@@ -39,17 +39,7 @@ export default class PhaseChanger extends Component {
       case 2:
         return <PhaseTwo {...props} />;
       case 3:
-        return (
-          <div className="scoreboard container">
-            <table className="table tabled-striped">
-              <thead>
-              </thead>
-              <tbody>
-                <PhaseThree {...props} />
-              </tbody>
-            </table>
-          </div>
-        );
+        return <PhaseThree {...props} />;
       default:
         break;
     }

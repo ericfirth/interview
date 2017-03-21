@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node4-lts/4.4.4/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build:dev:client' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.4
+4 verbose run-script [ 'prebuild:dev:client',
+4 verbose run-script   'build:dev:client',
+4 verbose run-script   'postbuild:dev:client' ]
+5 info prebuild:dev:client react-webpack-rails-tutorial@1.1.0
+6 info build:dev:client react-webpack-rails-tutorial@1.1.0
+7 verbose unsafe-perm in lifecycle true
+8 verbose stack Error: write EPIPE
+8 verbose stack     at exports._errnoException (util.js:870:11)
+8 verbose stack     at WriteWrap.afterWrite (net.js:769:14)
+9 verbose cwd /Users/eric.firth/code/interview/client
+10 error Darwin 15.6.0
+11 error argv "/usr/local/Cellar/node4-lts/4.4.4/bin/node" "/usr/local/bin/npm" "run" "build:dev:client"
+12 error node v4.4.4
+13 error npm  v2.15.1
+14 error code EPIPE
+15 error errno EPIPE
+16 error syscall write
+17 error write EPIPE
+18 error If you need help, you may report this error at:
+18 error     <https://github.com/npm/npm/issues>
+19 verbose exit [ 1, true ]
